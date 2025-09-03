@@ -5,11 +5,6 @@ const PORT = process.env.PORT || 8089;
 const app = express();
 const server = http.createServer(app);
 
-// 기본 루트 경로에 index.html 파일을 보내준다.
-app.use("/", function (req, res) {
-  res.sendFile(__dirname + "/index.html");
-});
-
 // WebSocket 서버를 HTTP 서버에 연결
 const wss = new WebSocketServer({ server });
 
