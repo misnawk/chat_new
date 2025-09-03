@@ -12,7 +12,7 @@ const Chat = () => {
   // 소켓 자동연결 및 설정
   useEffect(() => {
     // WebSocket 자동 연결 설정
-    const ws = new WebSocket("ws://localhost:8089");
+    const ws = new WebSocket("ws://192.168.0.4:8089");
     // ws 안에는 속성과 이벤트가 있다.
     setSocket(ws);
 
@@ -50,7 +50,7 @@ const Chat = () => {
 
   return (
     <div>
-      <h1>Chat</h1>
+      <h1>4MS 익명 채팅방</h1>
 
       <div
         style={{
