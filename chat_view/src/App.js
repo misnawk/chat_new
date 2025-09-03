@@ -1,11 +1,19 @@
 import "./App.css";
-import Chat from "./Chat";
-
+import AllChat from "./page/AllChat";
+import Chat from "./page/Chat";
+import Main from "./page/Main";
+import { Routes, Route, BrowserRouter } from "react-router-dom";
 function App() {
   return (
-    <div className="App">
-      <Chat />
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <Routes>
+          <Route path="/" element={<Main />} />
+          <Route path="/chat" element={<Chat />} />
+          <Route path="/allChat" element={<AllChat />} />
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 }
 
